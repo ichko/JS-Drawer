@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drawer</title>
+        <script type="text/javascript" src="inputHandler.js"></script>
+        <script type="text/javascript" src="drawer.js"></script>
+        
+        <style type="text/css">
+            html, body{padding: 0;margin: 0;}
+            #canvas{width: 100%; height: 100%;}
+            #controls{position: fixed;top: 0;left: 0;}
+        </style>
+    </head>
+    
+    <div id="controls">
+        <button id="download">Download</button>
+        <button id="clear">Clear</button>
+        <input type="color" id="brushColor" value="#2c5c8d"/>
+        <input type="number" id="size" value="10"/>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    
+    <script type="text/javascript">
+        var drawer = drawer || {};
+        var inputHandler = inputHandler || {};
+        
+        var picasso = drawer.init({
+            canvas: document.getElementById('canvas'), 
+            inputHandler: inputHandler,
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
+        
+        picasso.brush.color = '#2c5c8d';
+        picasso.brush.size = 10;
+        
+        document.getElementById('download').addEventListener('click', function(){
+            window.open(picasso.getAsImage().src, '_blank');
+        });
+        document.getElementById('clear').addEventListener('click', function(){
+            picasso.clear();
+        });
+        document.getElementById('brushColor').addEventListener('change', function(e){
+            picasso.brush.color = e.target.value;
+        });
+        document.getElementById('size').addEventListener('change', function(e){
+            picasso.brush.size = e.target.value;
+        });
+    </script>
+</html>
