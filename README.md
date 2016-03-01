@@ -1,4 +1,5 @@
 #JS Drawer
+JS 2D canvas drawer
 
 ##Example
 ```javascript
