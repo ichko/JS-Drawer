@@ -33,7 +33,7 @@ var drawer = (function(){
     function draw(ctx, mouse, brush){
         ctx.beginPath();
             ctx.strokeStyle = brush.color;
-            ctx.lineWidth = brush.size;
+            ctx.lineWidth = brush.size * 2;
             ctx.moveTo(mouse.oldX, mouse.oldY);
             ctx.lineTo(mouse.x, mouse.y);
             ctx.stroke();
@@ -41,7 +41,8 @@ var drawer = (function(){
         
         ctx.beginPath();
             ctx.fillStyle = brush.color;
-            ctx.arc(mouse.x, mouse.y, brush.size / 2, 0, 2 * Math.PI);
+            ctx.arc(mouse.oldX, mouse.oldY, brush.size, 0, 2 * Math.PI);
+            ctx.arc(mouse.x, mouse.y, brush.size, 0, 2 * Math.PI);
             ctx.fill();
         ctx.closePath();
     }

@@ -6,9 +6,9 @@
         <script type="text/javascript" src="drawer.js"></script>
         
         <style type="text/css">
-            html, body{padding: 0;margin: 0;}
-            #canvas{width: 100%; height: 100%;}
-            #controls{position: fixed;top: 0;left: 0;}
+            html, body{padding: 0;margin: 0;background: #ccc;}
+            #canvas{background: #fff;position: relative;top: 50px;left: 30px;}
+            #controls{position: absolute;top: 5px;left: 30px;}
         </style>
     </head>
     
@@ -28,8 +28,8 @@
         var picasso = drawer.init({
             canvas: document.getElementById('canvas'), 
             inputHandler: inputHandler,
-            width: window.innerWidth,
-            height: window.innerHeight
+            width: 800,
+            height: 600
         });
         
         picasso.brush.color = '#2c5c8d';
