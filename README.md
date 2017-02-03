@@ -1,12 +1,12 @@
-#JS Drawer
+#painter.js
 JS 2D canvas drawer
 
 ##Example
 ```javascript
-var drawer = drawer || {};
+var painter = painter || {};
 var inputHandler = inputHandler || {};
 
-var picasso = drawer.init({
+var picasso = painter.init({
     canvas: document.getElementById('canvas'), 
     inputHandler: inputHandler,
     width: window.innerWidth,
