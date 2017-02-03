@@ -1,4 +1,4 @@
-var drawer = (function(){
+var painter = (function(){
     
     function brush(config){
         this.color = config.color || '#ff0000';
