@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Drawer</title>
+        <title>Painter</title>
         <script type="text/javascript" src="inputHandler.js"></script>
-        <script type="text/javascript" src="drawer.js"></script>
+        <script type="text/javascript" src="painter.js"></script>
         
         <style type="text/css">
             html, body{padding: 0;margin: 0;background: #ccc;}
@@ -22,10 +22,10 @@
         <canvas id="canvas"></canvas>
         
         <script type="text/javascript">
-            var drawer = drawer || {};
+            var painter = painter || {};
             var inputHandler = inputHandler || {};
             
-            var picasso = drawer.init({
+            var picasso = painter.init({
                 canvas: document.getElementById('canvas'), 
                 inputHandler: inputHandler,
                 width: 800,
