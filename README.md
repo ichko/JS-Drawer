@@ -1,5 +1,5 @@
 #painter.js
-JS 2D canvas drawer
+JS 2D canvas painter
 
 ##Example
 ```javascript
