@@ -1,7 +1,7 @@
-#painter.js
+# painter.js
 JS 2D canvas painter
 
-##Example
+## Example
 ```javascript
 var painter = painter || {};
 var inputHandler = inputHandler || {};
